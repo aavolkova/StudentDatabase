@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!--<head>-->
+    <!--<meta charset="UTF-8" />-->
+    <!--<title>Title</title>-->
+
+    <!--Copied from: https://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+    <!-- Latest compiled and minified CSS -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1"/>-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<h2>Welcome to the Student Database!</h2>-->
+<!--<div>-->
+    <!--<p><a href="/">Home</a></p>-->
+
+
+    <!--<p><a href="/enterStudent">Add New Student</a></p>-->
+
+
+    <!--<p><a href="/allstudents">Display All Students</a></p>-->
+<!--</div>-->
+
+
+
+<!--<div>-->
+    <!--<h1>Welcome to Students Database!</h1>-->
+    <!--<p>...</p>-->
+    <!--<p>-->
+        <!--<a href="/login" role="button">Go to Secure</a>-->
+    <!--</p>-->
+<!--</div>-->
+
+
+
+
+
+
+<!--Copied from: https://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+<!-- jQuery library -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+<!-- Latest compiled JavaScript -->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<head th:replace="base :: headstuff"></head>
+<body>
+<nav th:replace="base :: navbar"></nav>
+<div class="container" data-th-cellpadding="5">
+    <div class="jumbotron">
+        <h1>Welcome to the Student Database!</h1>
+       <div class="container" align="center">
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg"
+                  href="/login" role="button">Go to Secure</a>
+            </p>
+           <p><a class="btn btn-primary btn-lg"
+                 href="/enterStudent" role="button">Add New Student</a>
+           </p>
+           <p><a class="btn btn-primary btn-lg"
+                 href="/allstudents" role="button">Display All Students</a>
+           </p>
+       </div>
+    </div>
+</div>
+<nav th:replace="base :: footer"></nav>
+<th:block th:replace="base :: jslinks"></th:block>
+</body>
+</html>

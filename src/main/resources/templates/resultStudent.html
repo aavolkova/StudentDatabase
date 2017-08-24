@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+
+<body>
+
+    <h1>Student Details Entered</h1>
+
+    <br/><br/>
+
+    <div class="container" align="left">
+
+        <div>
+
+            <div>
+                <h3 th:text="'First Name: ' + ${newStudent.firstName}"></h3>
+                <h3 th:text="'Last Name: ' + ${newStudent.lastName}"></h3>
+                <h3 th:text="'Email Address: ' + ${newStudent.emailAddress}"></h3>
+                <h3 th:text="'Phone Number: ' + ${newStudent.phoneNumber}"></h3>
+                <h3 th:text="'School: ' + ${newStudent.school}"></h3>
+            </div>
+
+            <br/><br/>
+            <div class="form-group">
+                <!--<a class="btn btn-primary btn-xl" href="/enterEducation" type = "submit">Continue Add Info</a><br/><br/>-->
+                <a class="btn btn-secondary" href="/" type = "submit">Home</a><br/><br/>
+                <a class="btn btn-secondary" href="/enterStudent" type = "submit">Enter Another Student</a><br/><br/>
+                <a class="btn btn-secondary" href="/allStudents" type = "submit">See list of  All Students</a><br/>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+
+</body>
+</html>
