@@ -20,8 +20,8 @@ public class MainController {
     StudentRepository studentRepository;
 
     // Display the home page
-    @RequestMapping("/")
-//    @GetMapping("/")
+//    @RequestMapping("/")
+    @GetMapping("/")
     public String showIndex()
     {
         return "index";
@@ -31,9 +31,16 @@ public class MainController {
     @RequestMapping("/login")
 //    @GetMapping("/login")
     public String login(){
+//        return "allStudents";
         return "login";
     }
 
+    @GetMapping("/allStudents")
+    public String showall(Model model) {
+
+        model.addAttribute("allstudents", studentRepository.findAll());
+        return "allStudents";
+    }
 
 
     // Allow user to enter Student's information
@@ -56,11 +63,11 @@ public class MainController {
         return "resultStudent";
     }
 
-    @GetMapping("/allStudents")
-    public String showall(Model model) {
-
-        model.addAttribute("allstudents", studentRepository.findAll());
-        return "allStudents";
-    }
+//    @GetMapping("/allStudents")
+//    public String showall(Model model) {
+//
+//        model.addAttribute("allstudents", studentRepository.findAll());
+//        return "allStudents";
+//    }
 
 }
